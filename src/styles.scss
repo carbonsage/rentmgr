@@ -1,20 +1,79 @@
 body {
-  /* background-color: #f4f7fb; */
   padding: 0 !important;
   margin: 0 !important;
   min-height: 100vh !important;
   max-width: 100vw !important;
   overflow-x: hidden;
+  background-image: url('/assets/img/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-p {
-  text-align: justify !important;
+.form {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  background-color: #FFF;
+  padding: 3%;
+  .title {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+  }
+  .button {
+    width: 100%;
+    // margin: 5% 0 0 0;
+    border: 0px none;
+    border-radius: 0px;
+    background-color: #3366FF;
+    color: white;
+    // font-size: 1.2em;
+    text-transform: uppercase;
+  }
+  .form-input {
+    display: block;
+    width: 100%;
+    margin: 0 0 5% 0;
+    border: none;
+    border-radius: 0px;
+    padding: 3.5% 2%;
+  }
+  .info {
+    margin: 3% 0 0 0;
+    width: 100%;
+    text-align: center;
+  }
 }
 
+.form.login-form {
+  width: 30%;
+  height: fit-content;
+}
+
+.form.reg-form {
+  width: 80%;
+  height: 70%;
+}
+
+@media only screen and (max-width: 600px) {
+  .reg-form,.login-form {
+    width: 80% !important;
+  }
+}
+
+@media only screen and  (max-width: 900px) and (min-width: 601px) {
+  .reg-form,.login-form {
+    width: 50% !important;
+  }
+}
 
 @media only screen and (min-width: 961px) {
   ::-webkit-scrollbar {
-    width: 5px !important;
+    width: 0px !important;
     border-radius: 1px !important;
   }
 
@@ -28,48 +87,4 @@ p {
     border-radius: 1px !important;
     width: inherit !important;
   }
-}
-
-// .mce-label {
-//   display: none !important;
-// }
-
-// .site-header {
-//   margin-bottom: 1.5em !important;
-// }
-
-.navbar {
-  // background-color: #05333D;
-  // border-radius: 0 0 10px 10px;
-  box-shadow: 0px 2px 2px #CCC;
-  // box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  // transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  width: 100vw;
-  padding: 0;
-
-  li {
-    cursor: pointer;
-  }
-}
-
-.login-form {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 30% !important;
-  height: fit-content;
-}
-
-.reg-form {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 80% !important;
-  height: 70%;
 }
