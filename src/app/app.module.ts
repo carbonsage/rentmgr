@@ -1,31 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
-import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
-import { FAQComponent } from './components/faq/faq.component';
-import { HelpComponent } from './components/help/help.component';
+
+// import { NbThemeModule, NbLayoutModule, NbCardModule, NbInputModule } from '@nebular/theme';
+import { AppRoutingModule, ROUTED_COMPONENTS } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { SERVICES } from './services';
+import { GUARDS } from './guards';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent,
-    FAQComponent,
-    HelpComponent
+    ...ROUTED_COMPONENTS
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NbThemeModule.forRoot({ name: 'corporate' }),
-    NbLayoutModule
+    // NbThemeModule.forRoot({ name: 'corporate' }),
+    // NbLayoutModule,
+    // NbCardModule,
+    // NbInputModule
   ],
-  providers: [],
+  providers: [
+    ...SERVICES,
+    ...GUARDS
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

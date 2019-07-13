@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PropertyRoutingModule , COMPONENTS } from './property.routing';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ...COMPONENTS
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    PropertyRoutingModule
   ]
 })
 export class PropertyModule { }
